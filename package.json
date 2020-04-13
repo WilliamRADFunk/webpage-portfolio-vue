@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "vue:start": "vue-cli-service serve",
+    "vue:build": "vue-cli-service build",
+    "vue:lint": "vue-cli-service lint",
+    "start": "run-s clean copy:assets copy:images copy:categories vue:start",
+    "build": "run-s clean copy:assets copy:images copy:categories vue:build copy:configs",
+    "test": "run-s clean copy:assets copy:images copy:categories vue:test",
+    "clean": "rimraf src/assets/base/**/*.*",
+    "copy:assets": "cpx ../webpage-portfolio/assets/*.* src/assets/base",
+    "copy:categories": "cpx ../webpage-portfolio/js/categories.js src/assets/base",
+    "copy:images": "cpx ../webpage-portfolio/images/*.* src/assets/base",
+    "copy:configs": "cpx src/assets/.htaccess dist/vue-version/"
   },
   "dependencies": {
+    "bootstrap": "^4.4.1",
+    "bootstrap-vue": "^2.11.0",
     "core-js": "^3.6.4",
+    "font-awesome": "^4.7.0",
     "vue": "^2.6.11"
   },
   "devDependencies": {
@@ -16,8 +27,13 @@
     "@vue/cli-plugin-eslint": "~4.3.0",
     "@vue/cli-service": "~4.3.0",
     "babel-eslint": "^10.1.0",
+    "cpx": "^1.5.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "node-sass": "^4.13.1",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.2",
+    "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.11"
   }
 }
