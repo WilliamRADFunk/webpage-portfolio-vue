@@ -10,6 +10,9 @@
             <li class="nav-item dropdown">
                 <b-dropdown class="nav-link">Code</b-dropdown>
                 <div class="w-100" style="min-width: 300px;">
+                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/drawing-inspiration-generator" target="_blank">Drawing Inspiration Generator</a></b-dropdown-item>
+                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/chess" target="_blank">Chess</a></b-dropdown-item>
+                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/checkers" target="_blank">Freckers</a></b-dropdown-item>
                     <b-dropdown-item><a href="https://github.com/WilliamRADFunk/data-glutton" target="_blank">Cryptobot Interface</a></b-dropdown-item>
                     <b-dropdown-item><a href="https://github.com/WilliamRADFunk/sudoku" target="_blank">Data Glutton</a></b-dropdown-item>
                     <b-dropdown-item><a href="https://github.com/WilliamRADFunk/sudoku" target="_blank">SuDoKu ExTrEmE</a></b-dropdown-item>
