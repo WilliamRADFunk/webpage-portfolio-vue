@@ -7,56 +7,49 @@
             <ul class="navbar-nav w-100">
             <li class="nav-item" @click="mobileCollapseState(); jumpTo();"><a class="nav-link" href="#about">About</a></li>
             <li class="nav-item" @click="mobileCollapseState(); jumpTo();"><a class="nav-link" href="#projects">Projects</a></li>
-            <li class="nav-item dropdown">
-                <b-dropdown class="nav-link">Code</b-dropdown>
-                <div class="w-100" style="min-width: 300px;">
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/drawing-inspiration-generator" target="_blank">Drawing Inspiration Generator</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/chess" target="_blank">Chess</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/checkers" target="_blank">Freckers</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/data-glutton" target="_blank">Cryptobot Interface</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/sudoku" target="_blank">Data Glutton</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/sudoku" target="_blank">SuDoKu ExTrEmE</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/planet-funk" target="_blank">Planet Funk</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/irl-reporting-site" target="_blank">Sense The IRL - Front End</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/irl-reporting-rest" target="_blank">Sense The IRL - Back End</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/stay-in-the-light" target="_blank">Stay in the Light</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/galactic-fighter" target="_blank">Galactic Fighter</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/cinema-tycoon" target="_blank">Cinema Tycoon</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/study-hall" target="_blank">Event Note</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://youtu.be/DStHPVL2SAE" target="_blank">Horseshoe Sweepstakes</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/vedic-site" target="_blank">Vedicode</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/vedic" target="_blank">V.E.D.I.C.</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/phood-buddy" target="_blank">Phood Buddy</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/planetary-defense/commits/master" target="_blank">Planetary Defense</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/hack-bauer-codebreaker" target="_blank">Hack Bauer: Codebreaker</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/two-tier_client-server_application" target="_blank">Two-Tiered Client-Server App</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/financial-tracking-repository/commits/master" target="_blank">Financial-Tracking-Repository</a></b-dropdown-item>
-                    <b-dropdown-item><a href="#projects" @click="jumpTo();">Content Alert</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/fake-bank" target="_blank">Fake-Bank</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/bookstore" target="_blank">Bookstore</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/the-cabal-effect/commits/master" target="_blank">The Cabal Effect</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/siege-warfare" target="_blank">Siege Warfare</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://www.npmjs.com/package/colors-plus" target="_blank">NPM Colors-Plus</a></b-dropdown-item>
-                    <b-dropdown-item><a href="#projects" @click="jumpTo();">Trig Driver</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/encryptor" target="_blank">The Encryptor</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/pong-3D" target="_blank">Pong 3D</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/tictactoe3D" target="_blank">TicTacToe 3D</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/tictactoe2D-AIOpponent" target="_blank">TicTacToe 2D</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/total-recall" target="_blank">Total-Recall</a></b-dropdown-item>
-                    <b-dropdown-item><a href="#projects" @click="jumpTo();">Q-Fish</a></b-dropdown-item>
-                    <b-dropdown-item><a href="https://github.com/WilliamRADFunk/cinema-guru">Cinema-Guru</a></b-dropdown-item>
-                </div>
-            </li>
+            <b-nav-item-dropdown>
+                <template slot="button-content">Code</template>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/data-glutton' }" target="_blank">Cryptobot Interface</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/sudoku' }" target="_blank">Data Glutton</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/sudoku' }" target="_blank">SuDoKu ExTrEmE</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/planet-funk' }" target="_blank">Planet Funk</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/irl-reporting-site' }" target="_blank">Sense The IRL - Front End</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/irl-reporting-rest' }" target="_blank">Sense The IRL - Back End</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/stay-in-the-light' }" target="_blank">Stay in the Light</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/galactic-fighter' }" target="_blank">Galactic Fighter</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/cinema-tycoon' }" target="_blank">Cinema Tycoon</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/study-hall' }" target="_blank">Event Note</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://youtu.be/DStHPVL2SAE' }" target="_blank">Horseshoe Sweepstakes</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/vedic-site' }" target="_blank">Vedicode</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/vedic' }" target="_blank">V.E.D.I.C.</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/phood-buddy' }" target="_blank">Phood Buddy</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/planetary-defense/commits/master' }" target="_blank">Planetary Defense</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/hack-bauer-codebreaker' }" target="_blank">Hack Bauer: Codebreaker</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/two-tier_client-server_application' }" target="_blank">Two-Tiered Client-Server App</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/financial-tracking-repository/commits/master' }" target="_blank">Financial-Tracking-Repository</b-dropdown-item>
+                <b-dropdown-item @click="jumpTo()" :to="{ path: '#projects' }">Content Alert</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/fake-bank' }" target="_blank">Fake-Bank</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/bookstore' }" target="_blank">Bookstore</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/the-cabal-effect/commits/master' }" target="_blank">The Cabal Effect</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/siege-warfare' }" target="_blank">Siege Warfare</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://www.npmjs.com/package/colors-plus' }" target="_blank">NPM Colors-Plus</b-dropdown-item>
+                <b-dropdown-item @click="jumpTo()" :to="{ path: '#projects' }">Trig Driver</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/encryptor' }" target="_blank">The Encryptor</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/pong-3D' }" target="_blank">Pong 3D</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/tictactoe3D' }" target="_blank">TicTacToe 3D</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/tictactoe2D-AIOpponent' }" target="_blank">TicTacToe 2D</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/total-recall' }" target="_blank">Total-Recall</b-dropdown-item>
+                <b-dropdown-item @click="jumpTo()" :to="{ path: '#projects' }">Q-Fish</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'https://github.com/WilliamRADFunk/cinema-guru' }" target="_blank">Cinema-Guru</b-dropdown-item>
+            </b-nav-item-dropdown>
             <li class="nav-item" @click="mobileCollapseState(); jumpTo();"><a class="nav-link" href="#work">Work Experience</a></li>
             <li class="nav-item" @click="mobileCollapseState()"><a class="nav-link" href="#contact">Contact</a></li>
-            <li class="nav-item dropdown">
-                <b-dropdown class="nav-link">Site Versions</b-dropdown>
-                <div class="w-100" style="min-width: 300px;">
-                    <b-dropdown-item><a href="http://www.williamrobertfunk.com" target="_self">Plain Javascript &amp; Bootstrap 3</a></b-dropdown-item>
-                    <b-dropdown-item class="text-success" disabled><a href="http://www.williamrobertfunk.com/angular-version" target="_self" class="text-success" disabled>Angular 8 &amp; Bootstrap 4</a></b-dropdown-item>
-                    <b-dropdown-item disabled class="disabled"><a href="http://www.williamrobertfunk.com/vue-version" target="_self" class="disabled" disabled>Vue &amp; Flexbox</a></b-dropdown-item>
-                </div>
-            </li>
+            <b-nav-item-dropdown>
+                <template slot="button-content">Site Versions</template>
+                <b-dropdown-item :to="{ path: 'http://www.williamrobertfunk.com' }" target="_self">Plain Javascript &amp; Bootstrap 3</b-dropdown-item>
+                <b-dropdown-item :to="{ path: 'http://www.williamrobertfunk.com/angular-version' }" target="_self">Angular 8 &amp; Bootstrap 4</b-dropdown-item>
+                <b-dropdown-item disabled class="text-success" :to="{ path: 'http://www.williamrobertfunk.com/vue-version' }" target="_self"><span class="text-success disabled">Vue &amp; Bootstrap-Vue</span></b-dropdown-item>
+            </b-nav-item-dropdown>
             </ul>
         </div>
         </div>
@@ -135,7 +128,7 @@
 
             > a,
             > span {
-            color: #35478C !important;
+                color: #35478C !important;
             }
         }
     }
@@ -147,7 +140,7 @@
     }
 
     .dropdown-toggle::after {
-        display: none;
+        display: none !important;
     }
 
     .dropdown-menu > .dropdown-item {
