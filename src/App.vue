@@ -12,29 +12,46 @@
         </div>
       </div>
     </div>
+    <div class="row no-gutters">
+      <div class="col-12">
+        <MissionSection/>
+      </div>
+    </div>
+    <div class="row no-gutters">
+      <div class="col-12">
+        <SectionHeader id="about" content="William Funk" prefix="ABOUT"/>
+        <AboutSection/>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
+import SectionHeader from './components/SectionHeader.vue';
 import HeaderContent from './components/HeaderContent.vue';
 import Navigation from './components/Navigation.vue';
+import MissionSection from './components/MissionSection.vue';
+import AboutSection from './components/AboutSection.vue';
 
 export default {
   name: 'App',
   components: {
+    SectionHeader,
     HeaderContent,
-    Navigation
+    Navigation,
+    MissionSection,
+    AboutSection
   }
 }
 </script>
 
 <style lang='scss'>
   #app {
-    font-family: Avenir, Helvetica, Arial, sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    // -webkit-font-smoothing: antialiased;
+    // -moz-osx-font-smoothing: grayscale;
+    // text-align: center;
+    // color: #2c3e50;
+    // margin-top: 60px;
   }
 </style>

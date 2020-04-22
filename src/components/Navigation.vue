@@ -66,7 +66,7 @@
                 /**
                  * Whether or not to show the dropdown menu
                  */
-                showState: true
+                showState: false
             };
         },
         methods: {
